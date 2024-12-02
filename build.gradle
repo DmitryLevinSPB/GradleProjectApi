@@ -1,0 +1,28 @@
+plugins {
+    id 'java-library'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+
+def slf4jVersion = "1.7.32"
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    testImplementation 'junit:junit:4.13.2'
+    implementation 'io.cucumber:cucumber-java:7.20.1'
+    testImplementation 'io.rest-assured:rest-assured:5.5.0'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.18.1'
+    implementation 'com.codeborne:selenide:7.5.1'
+    implementation 'org.slf4j:slf4j-api:2.0.16'
+
+}
+
+test {
+    useJUnitPlatform()
+}
