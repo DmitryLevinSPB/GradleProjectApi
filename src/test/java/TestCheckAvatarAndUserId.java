@@ -37,8 +37,6 @@ List<String> avatars = user.stream().map(DataItem::getAvatar).collect(Collectors
             Assert.assertTrue(avatars.get(i).contains(id.get(i)));
 
         }
-
-        int one =9;
     }
 
     }
