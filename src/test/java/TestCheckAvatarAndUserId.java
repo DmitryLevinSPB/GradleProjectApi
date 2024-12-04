@@ -61,7 +61,6 @@ public class TestCheckAvatarAndUserId {
 
 
     }
-}
 
     @Test
     @DisplayName("Негативный кейс. Неуспешная регистрация")

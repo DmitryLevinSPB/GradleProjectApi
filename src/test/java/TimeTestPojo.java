@@ -3,6 +3,12 @@ public class TimeTestPojo{
 	private String job;
 	private String updatedAt;
 
+
+	public TimeTestPojo(String name, String job) {
+		this.name = name;
+		this.job = job;
+	}
+
 	public String getName(){
 		return name;
 	}
@@ -11,7 +17,4 @@ public class TimeTestPojo{
 		return job;
 	}
 
-	public String getUpdatedAt(){
-		return updatedAt;
-	}
 }
