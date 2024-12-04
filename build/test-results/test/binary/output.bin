@@ -1,10 +1,10 @@
 HTTP/1.1 200 OK
-%Date: Wed, 04 Dec 2024 13:50:50 GMT
+%Date: Wed, 04 Dec 2024 20:02:52 GMT
 /Content-Type: application/json; charset=utf-8
 Transfer-Encoding: chunked
 Connection: keep-alive
-ÓReport-To: {"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1732797246&sid=c4c9725f-1ab0-44d8-820f-430df2718e11&s=4Cf0N3A3majinpAr0rt3JG%2B7i6m6Kpl0LZxeBA2AeT0%3D"}]}
-ªReporting-Endpoints: heroku-nel=https://nel.heroku.com/reports?ts=1732797246&sid=c4c9725f-1ab0-44d8-820f-430df2718e11&s=4Cf0N3A3majinpAr0rt3JG%2B7i6m6Kpl0LZxeBA2AeT0%3D
+×Report-To: {"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1732845065&sid=c4c9725f-1ab0-44d8-820f-430df2718e11&s=g%2FMTgAZxkNqGB4gjK%2FjxchcoegWa%2B1HEJKrfHXQTUQE%3D"}]}
+®Reporting-Endpoints: heroku-nel=https://nel.heroku.com/reports?ts=1732845065&sid=c4c9725f-1ab0-44d8-820f-430df2718e11&s=g%2FMTgAZxkNqGB4gjK%2FjxchcoegWa%2B1HEJKrfHXQTUQE%3D
 |Nel: {"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}
 X-Powered-By: Express
  Access-Control-Allow-Origin: *
@@ -12,13 +12,12 @@
 Via: 1.1 vegur
 Cache-Control: max-age=14400
 CF-Cache-Status: HIT
-
-Age: 746
+Age: 6951
 Vary: Accept-Encoding
 Server: cloudflare
-CF-RAY: 8ecc448eb91acf82-SJC
+CF-RAY: 8ece6586dcc00405-CDG
 Content-Encoding: gzip
-Úserver-timing: cfL4;desc="?proto=TCP&rtt=200528&min_rtt=200528&rtt_var=100264&sent=8&recv=8&lost=0&retrans=1&sent_bytes=3298&recv_bytes=784&delivery_rate=10279&cwnd=253&unsent_bytes=0&cid=f2ff5f7e571bacd2&ts=626&x=0"
+×server-timing: cfL4;desc="?proto=TCP&rtt=88904&min_rtt=86464&rtt_var=37305&sent=7&recv=7&lost=0&retrans=0&sent_bytes=3108&recv_bytes=784&delivery_rate=41324&cwnd=253&unsent_bytes=0&cid=7bb2b5eb043ac201&ts=335&x=0"
 
 {
     "page": 2,
