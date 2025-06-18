@@ -1,5 +1,6 @@
 plugins {
     id 'java-library'
+    id 'io.qameta.allure' version '2.32.2'  // Обязательно указываем версию
 }
 
 group 'org.example'
