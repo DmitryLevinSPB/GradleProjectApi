@@ -22,6 +22,17 @@ dependencies {
     implementation 'org.slf4j:slf4j-api:2.0.16'
 
 }
+task hello {
+    doLast {
+        println 'Привет, Gradle!'
+    }
+}
+
+// Задача для сборки JAR
+task buildJar(type: Jar) {
+    archiveFileName = 'myapp.jar'
+    from sourceSets.main.output
+}
 
 test {
     useJUnitPlatform()
