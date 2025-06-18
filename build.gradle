@@ -35,10 +35,10 @@ test {
 }
 
 allure {
-    version = '2.23.0'
+    version = '2.32.2'
     configuration = 'testImplementation'
     useJUnit5 {
-        version = '2.23.0'
+        version = '2.32.2'
     }
     destinationDir = file("$buildDir/reports/tests")
     reportOn test
