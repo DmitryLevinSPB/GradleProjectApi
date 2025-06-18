@@ -31,10 +31,15 @@ task hello {
 
 test {
     useJUnitPlatform()
+    systemProperty 'allure.results.directory', 'build/allure-results'
 }
 
-// Генерация отчета в HTML
-task testReport(type: TestReport) {
+allure {
+    version = '2.23.0'
+    configuration = 'testImplementation'
+    useJUnit5 {
+        version = '2.23.0'
+    }
     destinationDir = file("$buildDir/reports/tests")
     reportOn test
 }
