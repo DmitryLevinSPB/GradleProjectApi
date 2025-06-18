@@ -28,12 +28,15 @@ task hello {
     }
 }
 
-// Задача для сборки JAR
-task buildJar(type: Jar) {
-    archiveFileName = 'myapp.jar'
-    from sourceSets.main.output
-}
-
 test {
     useJUnitPlatform()
+    testLogging {
+        events "passed", "skipped", "failed"
+    }
+}
+
+// Генерация отчета в HTML
+task testReport(type: TestReport) {
+    destinationDir = file("$buildDir/reports/tests")
+    reportOn test
 }
