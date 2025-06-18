@@ -30,9 +30,6 @@ task hello {
 
 test {
     useJUnitPlatform()
-    testLogging {
-        events "passed", "skipped", "failed"
-    }
 }
 
 // Генерация отчета в HTML
