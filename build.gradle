@@ -37,10 +37,10 @@ test {
 
 allure {
     version = '2.23.0'
-    
-    // Новая правильная конфигурация адаптера
     adapter {
          useJUnit5 {
         version = '2.23.0'
     }
+    }
+}
 }
