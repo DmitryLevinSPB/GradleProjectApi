@@ -1,6 +1,6 @@
 plugins {
     id 'java-library'
-    id 'io.qameta.allure' version '2.11.2'  // Обязательно указываем версию
+   id 'io.qameta.allure-adapter' version '2.11.2'  // Используем правильный ID плагина
 }
 
 group 'org.example'
@@ -37,10 +37,11 @@ test {
 
 allure {
     version = '2.23.0'
-    configuration = 'testImplementation'
-    useJUnit5 {
-        version = '2.23.0'
+    
+    // Новая правильная конфигурация адаптера
+    adapter {
+        junit5 {
+            adapterVersion = '2.23.0'
+        }
     }
-    destinationDir = file("$buildDir/reports/tests")
-    reportOn test
 }
