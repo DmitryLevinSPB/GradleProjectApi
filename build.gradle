@@ -43,3 +43,14 @@ allure {
     }
     }
 }
+// Задача для генерации Allure отчета
+task generateAllureReport(type: Exec) {
+    dependsOn 'test'
+    commandLine 'allure', 'generate', 'build/allure-results', '-o', 'build/reports/allure-report'
+}
+
+// Задача для открытия отчета (опционально)
+task openAllureReport(type: Exec) {
+    dependsOn 'generateAllureReport'
+    commandLine 'allure', 'open', 'build/reports/allure-report'
+}
