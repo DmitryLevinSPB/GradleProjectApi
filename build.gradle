@@ -40,8 +40,7 @@ allure {
     
     // Новая правильная конфигурация адаптера
     adapter {
-        junit5 {
-            adapterVersion = '2.23.0'
-        }
+         useJUnit5 {
+        version = '2.23.0'
     }
 }
