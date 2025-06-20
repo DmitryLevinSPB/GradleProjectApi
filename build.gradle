@@ -31,8 +31,8 @@ task hello {
 }
 
 test {
-    useJUnitPlatform()
-    systemProperty 'allure.results.directory', 'build/allure-results'
+    systemProperty 'allure.results.directory', 
+       "${System.env.WORKSPACE}\\build\\allure-results"
 }
 
 allure {
