@@ -57,9 +57,9 @@ public class TestCheckAvatarAndUserId {
     }
 
     @Test
-    @DisplayName("Негативный кейс. Неуспешная регистрация")
+    @DisplayName("Register - unsuccessful")
    public void testErrorRegistr() {
-        Specification.installSpecification(Specification.requestSpec(url), Specification.responseSpecError401());
+        Specification.installSpecification(Specification.requestSpec(url), Specification.responseSpecError400());
         Register user = new Register("sydney@fife", "");
         UnsuccessRegister error = given()
                 .when()
