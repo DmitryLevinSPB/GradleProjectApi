@@ -29,6 +29,11 @@ public class Specification {
                 .expectStatusCode(400)
                 .build();
     }
+    public static ResponseSpecification responseSpecError401() {
+        return new ResponseSpecBuilder()
+                .expectStatusCode(401)
+                .build();
+    }
 
     public static ResponseSpecification responseSpecUnique(int status) {
         return new ResponseSpecBuilder()

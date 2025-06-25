@@ -1,16 +1,10 @@
 import Pojo.DataItem;
 import Specifications.Specification;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import io.cucumber.java.en.When;
-import io.restassured.http.ContentType;
-import org.codehaus.groovy.util.SingleKeyHashMap;
 import org.junit.Assert;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.time.Clock;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -21,7 +15,7 @@ public class TestCheckAvatarAndUserId {
     private static String url = "https://reqres.in/";
 
     @Test
-    @DisplayName("Первый тест апи")
+    @DisplayName("First test API")
     public void checkAvatarAndUserId() {
         Specification.installSpecification(Specification.requestSpec(url), Specification.responseSpecOk200());
         List<DataItem> user = given()
@@ -43,7 +37,7 @@ public class TestCheckAvatarAndUserId {
     }
 
     @Test
-    @DisplayName("Успешная регистрация методом POST")
+    @DisplayName("Sussefull method registration \"POST\"")
     public void testSuccessRegistration() {
         Specification.installSpecification(Specification.requestSpec(url), Specification.responseSpecOk200());
         Integer id = 4;
@@ -65,7 +59,7 @@ public class TestCheckAvatarAndUserId {
     @Test
     @DisplayName("Негативный кейс. Неуспешная регистрация")
    public void testErrorRegistr() {
-        Specification.installSpecification(Specification.requestSpec(url), Specification.responseSpecError400());
+        Specification.installSpecification(Specification.requestSpec(url), Specification.responseSpecError401());
         Register user = new Register("sydney@fife", "");
         UnsuccessRegister error = given()
                 .when()
