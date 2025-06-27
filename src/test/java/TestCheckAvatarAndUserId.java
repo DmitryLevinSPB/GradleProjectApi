@@ -87,7 +87,7 @@ public class TestCheckAvatarAndUserId {
 
 
     @Test
-    @DisplayName("123")
+    @DisplayName("Redirect")
     public void TestDeleteUsers () {
         Specification.installSpecification(Specification.requestSpec(url), Specification.responseSpecUnique(204));
         given()
