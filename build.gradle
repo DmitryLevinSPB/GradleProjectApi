@@ -1,6 +1,7 @@
 plugins {
     id 'java-library'
-   id 'io.qameta.allure-adapter' version '2.11.2'  // Используем правильный ID плагина
+    id 'io.qameta.allure-adapter' version '2.11.2'  // Используем правильный ID плагина
+    id 'io.qameta.allure' version '2.11.2'
 }
 
 group 'org.example'
@@ -34,16 +35,21 @@ task hello {
 
 test {
     useJUnitPlatform()
-    systemProperty 'allure.results.directory', 
-       "${System.env.WORKSPACE}\\build\\allure-results"
+    systemProperty 'allure.results.directory',
+            "${System.env.WORKSPACE}\\build\\allure-results"
 }
+
 
 allure {
     version = '2.23.0'
+    autoconfigure = true
     adapter {
-         useJUnit5 {
-        version = '2.23.0'
-    }
+        useJUnit5 {
+            version = '2.23.0'
+        }
+        report {
+            version.set("2.20.1")
+        }
     }
 }
 // Задача для генерации Allure отчета
